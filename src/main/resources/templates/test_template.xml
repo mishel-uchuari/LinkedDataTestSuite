@@ -78,7 +78,7 @@ espacio en blanco: &#160;  -->
 		<name>GETResourceDirectlyDataRDFXMLContent</name>
 		<pathUri>data/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</pathUri>
 		<comment>Obtener recurso en RDF/XML directamente de /data, parsear contenido</comment>
-		<contains>&lt;ContractEconomicConditions&#160;xmlns=\&quot;http://contsem.unizar.es/def/sector-publico/pproc#\&quot;&#160;rdf:datatype=\&quot;http://www.w3.org/2001/XMLSchema#long\&quot;&gt;3670496&lt;/ContractEconomicConditions&gt;</contains>
+		<contains>&lt;ContractEconomicConditions&#160;xmlns=&quot;http://contsem.unizar.es/def/sector-publico/pproc#rdf:datatype=&quot;http://www.w3.org/2001/XMLSchema#long&quot;&gt;3670496&lt;/ContractEconomicConditions&gt;</contains>
 	</GETResourceDirectlyDataRDFXMLContent>
 	<GETResourceDirectlyDataTTLContent>
 		<baseUri>http://es.euskadi.eus:8008/</baseUri>
@@ -141,7 +141,7 @@ espacio en blanco: &#160;  -->
 		<name>GETResourceN3Content</name>
 		<pathUri>id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</pathUri>
 		<comment>Obtener recurso en N3, parsear contenido</comment>
-		<contains>&lt;http://contsem.unizar.es/def/sector-publico/pproc#managingDepartment&gt;&#160;&lt;http://es.euskadi.eus/id/sector-publico/departamento/desarrollo-economico-e-infraestructuras&gt;&#160;;</contains>
+		<contains>&lt;http://contsem.unizar.es/def/sector-publico/pproc#managingDepartment&gt;&lt;http://es.euskadi.eus/id/sector-publico/departamento/desarrollo-economico-e-infraestructuras&gt;&#160;</contains>
 	</GETResourceN3Content>
 	<GETResourceNQuadsContent>
 		<baseUri>http://es.euskadi.eus:8008/</baseUri>

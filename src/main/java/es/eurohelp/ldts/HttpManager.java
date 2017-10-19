@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
@@ -108,7 +109,7 @@ public class HttpManager {
 					completeUri = completeUri + key + "=" + parameters.get(key);
 					numParam++;
 				}
-
+				//completeUri= URLEncoder.encode(completeUri, "UTF-8"); 
 				httpget = new HttpGet(completeUri);
 				httpget.setHeader("accept", requestBean.getAccept());
 

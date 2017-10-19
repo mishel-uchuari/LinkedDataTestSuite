@@ -88,7 +88,7 @@
 						<form:option value="-">-</form:option>
 						<form:option value="GET">GET</form:option>
 						<form:option value="POST">POST</form:option>
-						<form:option value="GETN0303">GETNO303</form:option>
+						<form:option value="GETNO303">GETNO303</form:option>
 					</form:select>
 					<form:errors path="method" cssClass="campoConError" />
 				<p>

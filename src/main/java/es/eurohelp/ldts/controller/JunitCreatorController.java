@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.xml.sax.SAXException;
 
 import es.eurohelp.ldts.Junit;
-import es.eurohelp.ldts.LodTest;
 import es.eurohelp.ldts.LodTestMain;
 import es.eurohelp.ldts.XML;
 import es.eurohelp.ldts.validator.JunitDataValidator;
@@ -42,10 +41,10 @@ public class JunitCreatorController {
 			System.err.println(result.getFieldError());
 			return "junitCreator";
 		} else {
-			XML xml = new XML();
-			xml.createFile(junit);
-//			JUnitCore junitCore = new JUnitCore();
-//			Result resultado = junitCore.run(LodTestMain.class);
+//			XML xml = new XML();
+//			xml.createFile(junit);
+			JUnitCore junitCore = new JUnitCore();
+			Result resultado = junitCore.run(LodTestMain.class);
 //			System.err.println(resultado.getFailureCount());
 
 			return "home";

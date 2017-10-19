@@ -103,14 +103,14 @@ public class XML {
 			}
 			for (int i = 0; i < pJunit.getIdParametro().length; i++) {
 				Element parameter = document.createElement("parameter");
-				Element paramName = document.createElement("name");
+				Element paramId = document.createElement("id");
 				Text paramLiteralName = document.createTextNode(pJunit.getIdParametro()[i]);
 				Element paramValue = document.createElement("value");
 				Text paramLiteralValue = document.createTextNode(pJunit.getValorParametro()[i]);
 				junit.appendChild(requestParameters);
 				requestParameters.appendChild(parameter);
-				parameter.appendChild(paramName);
-				paramName.appendChild(paramLiteralName);
+				parameter.appendChild(paramId);
+				paramId.appendChild(paramLiteralName);
 				parameter.appendChild(paramValue);
 				paramValue.appendChild(paramLiteralValue);
 			}

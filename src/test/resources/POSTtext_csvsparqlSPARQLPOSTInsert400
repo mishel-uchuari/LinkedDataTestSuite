@@ -1,4 +1,4 @@
-SPARQL-QUERY: queryStr=INSERT DATA { GRAPH <http://lod.eurohelp.es> { <http://lod.eurohelp.es/mikel> <http://lod.eurohelp.es/position> <http://lod.eurohelp.es/analist> } }
+SPARQL-QUERY: queryStr=INSERT DATA { GRAPH <http://lod.eurohelp.es>{<http:lod.eurohelp.es/mikel><http://lod.eurohelp.es/position><http://lod.eurohelp.es/analist> } }
 java.util.concurrent.ExecutionException: org.openrdf.query.MalformedQueryException: Encountered " "insert" "INSERT "" at line 1, column 1.
 Was expecting one of:
     "base" ...

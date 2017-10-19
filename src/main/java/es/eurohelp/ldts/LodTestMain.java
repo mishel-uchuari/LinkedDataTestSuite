@@ -16,11 +16,10 @@ import bsh.EvalError;
 import bsh.Interpreter;
 import es.eurohelp.ldts.HttpManager;
 import es.eurohelp.ldts.LinkedDataRequestBean;
-import es.eurohelp.ldts.LodTest;
 import es.eurohelp.ldts.PropertiesManager;
 
 public class LodTestMain {
-	private static final Logger logger = LoggerFactory.getLogger(LodTest.class);
+	//private static final Logger logger = LoggerFactory.getLogger(Paralaspruebas.class);
 	private static List<LinkedDataRequestBean> tests = new ArrayList<LinkedDataRequestBean>();
 	private static int executionCount = 0;
 

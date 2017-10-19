@@ -51,7 +51,7 @@
   <body class="container-fluid">
   <header class="col-xs-12 text-center">
     <h1>Linked Data Test Suite Report</h1>
-    <h2>05-oct-2017 15:31:12</h2>
+    <h2>19-oct-2017 09:31:56</h2>
   </header>
 
     <hr/>
@@ -66,17 +66,107 @@
     
     POST:
     
-
-    				[<a href=#1>SPARQLPOSTNamedGraphsMetadataCSVContent</a>]
-
-
-    				[<a href=#3>SPARQLPOSTInsert400</a>]
-
     <br/>
     GET:
     
 
-    				[<a href=#2>GETSPARQLHTML200</a>]
+    				[<a href=#0>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#1>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#2>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#3>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#4>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#5>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#6>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#7>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#8>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#9>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#10>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#11>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#12>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#13>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#14>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#15>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#16>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#17>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#18>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#19>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#20>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#21>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#22>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#23>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#24>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#25>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#26>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#27>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#28>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#29>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#30>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#31>GETResourceRDFJSON200</a>]
+
+
+    				[<a href=#32>GETResourceRDFJSON200</a>]
 
 
 	<table class="table table-hover">
@@ -96,34 +186,367 @@
    	
    	<form action="run" method="post">
    		<tr>
-   			<td><input type="checkbox" name="test" value="GETSPARQLHTML200" unchecked></td>
-	   		<td id=2>GETSPARQLHTML200</td>
-	   		<td>Ir directo a formulario SPARQL</td>
-	   		<td><a href=http://es.euskadi.eus:8008/sparql>http://es.euskadi.eus:8008/sparql</a></td>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=0>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
 	   		<td>GET</td>
-	   		<td>text/html</td>
+	   		<td>application/rdf+json</td>
 	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
-	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETtext_htmlsparqlGETSPARQLHTML200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
     	</tr>
    		<tr>
-   			<td><input type="checkbox" name="test" value="SPARQLPOSTNamedGraphsMetadataCSVContent" unchecked></td>
-	   		<td id=1>SPARQLPOSTNamedGraphsMetadataCSVContent</td>
-	   		<td>Consulta sobre datos y metadatos, parsear contenido</td>
-	   		<td><a href=http://es.euskadi.eus:8008/sparql>http://es.euskadi.eus:8008/sparql</a></td>
-	   		<td>POST</td>
-	   		<td>text/csv</td>
-	   			<td style="color:red; text-align: center;"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></td>
-	   		<td style="text-align: center;"><a style="color:black;" href="/static/POSTtext_csvsparqlSPARQLPOSTNamedGraphsMetadataCSVContent"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=1>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
     	</tr>
    		<tr>
-   			<td><input type="checkbox" name="test" value="SPARQLPOSTInsert400" unchecked></td>
-	   		<td id=3>SPARQLPOSTInsert400</td>
-	   		<td>Insertar datos, deberia fallar</td>
-	   		<td><a href=http://es.euskadi.eus:8008/sparql>http://es.euskadi.eus:8008/sparql</a></td>
-	   		<td>POST</td>
-	   		<td>text/csv</td>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=2>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
 	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
-	   		<td style="text-align: center;"><a style="color:black;" href="/static/POSTtext_csvsparqlSPARQLPOSTInsert400"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=3>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=4>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=5>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=6>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=7>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=8>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=9>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=10>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=11>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=12>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=13>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=14>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=15>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=16>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=17>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=18>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=19>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=20>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=21>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=22>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=23>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=24>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=25>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=26>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=27>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=28>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=29>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=30>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=31>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
+    	</tr>
+   		<tr>
+   			<td><input type="checkbox" name="test" value="GETResourceRDFJSON200" unchecked></td>
+	   		<td id=32>GETResourceRDFJSON200</td>
+	   		<td>Obtener 
+			recurso en RDF/JSON, parsear contenido </td>
+	   		<td><a href=http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09>http://es.euskadi.eus:8008/id/sector-publico/puestos-trabajo/contrato/1-gobierno-vasco-donostia-easo-10-3024.0-2016-05-09</a></td>
+	   		<td>GET</td>
+	   		<td>application/rdf+json</td>
+	   			<td style="color:green; text-align: center;"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></td>
+	   		<td style="text-align: center;"><a style="color:black;" href="/static/GETapplication_rdf+jsonid_sector-publico_puestos-trabajo_contrato_1-gobierno-vasco-donostia-easo-10-3024_0-2016-05-09GETResourceRDFJSON200"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>
     	</tr>
     
     </tbody>

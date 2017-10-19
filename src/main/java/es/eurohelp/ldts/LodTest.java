@@ -1,12 +1,6 @@
 package es.eurohelp.ldts;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import static org.junit.Assert.*;
 
 import org.junit.AfterClass;
 import org.junit.Rule;
@@ -16,23 +10,24 @@ import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.xml.sax.SAXException;
 
-import es.eurohelp.ldts.HttpManager;
-import es.eurohelp.ldts.LinkedDataRequestBean;
-import es.eurohelp.ldts.ReportManager;
+import bsh.EvalError;
+import bsh.Interpreter;
 import es.eurohelp.ldts.controller.TestController;
 
-/**
- * @author grozadilla
- * @author Mikel Egaña Aranguren
- * @author ssantamariap
- *
- */
-
-public class LodTest  {
-	
+public class LodTest {
 	private static final Logger logger = LoggerFactory.getLogger(LodTest.class);
 	private static List<LinkedDataRequestBean> tests = new ArrayList<LinkedDataRequestBean>();
 	private static int executionCount = 0;
@@ -40,443 +35,43 @@ public class LodTest  {
 	LinkedDataRequestBean requestBean;
 	XMLUtils xmlUtils = new XMLUtils();
 	String xmlContainsNode = "";
-	
+
 	@Test
-	public final void GETSPARQLHTML200 () {
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertEquals(requestBean.getStatus(), 200);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceHTMLPageNoRedirect303(){
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getLocation().contains(xmlContainsNode));
-			assertEquals(requestBean.getStatus(), 303);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-		
-	@Test
-	public final void GETResourceHTMLDocNoRedirect303(){
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getLocation().contains(xmlContainsNode));
-			assertEquals(requestBean.getStatus(), 303);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceHTMLDoc(){
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceHTMLPage(){
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceDirectlyDoc(){
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertEquals(requestBean.getStatus(), 200);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceRDFXMLContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceDirectlyDataRDFXMLContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceDirectlyDataTTLContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceDirectlyDataJSONLDContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceDirectlyDataRDFXMLContentHTMLHeader (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceDirectlyDataTTLContentHTMLHeader (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceDirectlyDataJSONLDContentHTMLHeader (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceJSONLDContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceN3Content (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceNQuadsContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceNTriplesContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceRDFJSON200 (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceTriGContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceTriXContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETResourceTurtleContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETClassRDFXMLContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETClassHTML200 (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertEquals(requestBean.getStatus(), 200);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETClassHTMLAnchorContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertEquals(requestBean.getStatus(), 200);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	
-	@Test
-	public final void GETPropertyRDFXMLContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETPropertyHTML200 (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertEquals(requestBean.getStatus(), 200);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-		
-	@Test
-	public final void GETOntologyHTMLContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETOntologyHTMLContentFileExtensionHTML (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETOntologyRDFXMLContentHTMLHeader (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETOntologyRDFXMLContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void GETOntologyRDFXMLContentFileExtensionOWL (){ 
-		try {
-			//requestBean = xmlUtils.getXMLData(new Object(){}.getClass().getEnclosingMethod().getName());
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-		
-	@Test
-	public final void SPARQLPOSTNamedGraphsMetadataCSVContent (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			Map<String, String> parameters = new HashMap<String, String>();
-			parameters.put("query",
-					"SELECT DISTINCT ?g ?p ?o "
-					+ "WHERE { "
-					+ "	?g ?p ?o ."
-					+ "	GRAPH ?g "
-					+ "		{"
-					+ "			?sub ?pred ?obj"
-					+ "		} "
-					+ "}");
+	public final void executeJunit() throws ParserConfigurationException, SAXException, IOException, EvalError {
+
+		//String pTestName = System.getProperty("testname");
+		//GETOntologyHTMLContentFileExtensionHTML
+		String pTestName = "GETResourceRDFJSON200";
+		System.err.println(pTestName);
+		requestBean = xmlUtils.getXMLData2(pTestName);
+		Map<String, String> parameters = xmlUtils.getParameters(pTestName);
+		if (!parameters.isEmpty()) {
 			requestBean.setParameters(parameters);
-			HttpManager.getInstance().doRequest(requestBean);
-			assertTrue(requestBean.getResponseString().contains(xmlContainsNode));
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
-	}
-	
-	@Test
-	public final void SPARQLPOSTMassiveCSV200 (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			Map<String, String> parameters = new HashMap<String, String>();
-			parameters.put("query",
-					"SELECT ?g ?p ?o "
-					+ "WHERE { "
-					+ "	?g ?p ?o ."
-					+ "} LIMIT 145000");
-			requestBean.setParameters(parameters);
-			HttpManager.getInstance().doRequest(requestBean);
-			assertEquals(requestBean.getStatus(), 200);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
-	public final void SPARQLPOSTInsert400 (){ 
-		try {
-			requestBean = xmlUtils.getXMLData(method.getMethodName());
-			xmlContainsNode = xmlUtils.getXmlContainsNode(method.getMethodName());
-			Map<String, String> parameters = new HashMap<String, String>();
-			parameters.put("query",
-					"INSERT DATA { "
-					+ "GRAPH <http://lod.eurohelp.es> "
-					+ "{ "
-					+ "<http://lod.eurohelp.es/mikel> <http://lod.eurohelp.es/position> <http://lod.eurohelp.es/analist> "
-					+ "} }");
-			requestBean.setParameters(parameters);
-			HttpManager.getInstance().doRequest(requestBean);
-			assertEquals(requestBean.getStatus(),400);
-		} catch (Exception e) {
-			e.printStackTrace();
+		HttpManager.getInstance().doRequest(requestBean);
+		Interpreter interpreter = new Interpreter();
+		interpreter.set("requestBean", requestBean);
+		interpreter.eval("import org.junit.Assert;");
+
+		ArrayList<ArrayList<String>> conditionsToTest = xmlUtils.getTestConditionsToTest(pTestName);
+		
+		// En primer lugar ira el tipo de prueba, en segundo el objeto de
+		// prueba, en tercero el modo de comparacion, y en cuarto el valor
+		for (int i = 0; i < conditionsToTest.size(); i++) {
+			for (int j = 0; j < conditionsToTest.get(i).size(); j++) {
+				if (conditionsToTest.get(0).get(j).contains("Equals")) {
+					System.out.println("equals");
+					String query ="Assert."+conditionsToTest.get(0).get(j) + "(" + conditionsToTest.get(1).get(j) + ","
+							+ conditionsToTest.get(3).get(j) + ");";
+					System.err.println(query);
+					interpreter.eval(query);
+				} else {// aqui si no equals->asserttrue, assertfalse
+					String query = "Assert."+conditionsToTest.get(0).get(j) + "(" + conditionsToTest.get(1).get(j)+"."
+							+ conditionsToTest.get(2).get(j) + "(\""+conditionsToTest.get(3).get(j)+"\"));";
+					System.err.println(query);
+					interpreter.eval(query);
+				}
+			}
 		}
 	}
 	
@@ -513,25 +108,26 @@ public class LodTest  {
 		}
 	};
 	
+	
 	@Rule
 	public TestName method = new TestName();
 	
 	@AfterClass
 	public static void createReport() {
-		
+
 		executionCount++;
 		logger.info("Contador: " + executionCount + " Nº de test: " + TestController.testCount);
-		
-		//Generating report just when all single test have been runned.
-		if(executionCount == TestController.testCount){
+
+		// Generating report just when all single test have been runned.
+		if (executionCount == TestController.testCount) {
 			executionCount = 0;
 			try {
 				logger.info("REPORT");
-				ReportManager.getInstance().createReport(tests);	
+				ReportManager.getInstance().createReport(tests);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}	
-		}	
+			}
+		}
 	}
-	
+
 }
